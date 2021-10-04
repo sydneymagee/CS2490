@@ -83,7 +83,7 @@ public class SydneyMageeP2 {
         }
         
         System.out.println( "Occurrence counts: ");
-        System.out.println( "cheetah count is " + cheetahCount);
+        System.out.println( "cheetah  count is " + cheetahCount);
         System.out.println( "hatch    count is " + hatchCount);
         System.out.println( "teach    count is " + teachCount);
         System.out.println( "cheat    count is " + cheatCount);
