@@ -1,6 +1,10 @@
 /**
   * Program that recognizes strings over {a, b, c} that contain
   * either the substring aac, abcc, or bcb
+  * 
+  * To run this program, use java. 
+  * The program will prompt the user for a string.
+  *
   **/
 
 
@@ -8,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FiniteStateMachine
+public class FSM0
 {
     private final static int[][] STATE_TABLE = {
         {4, 1, 0, 8}, //0
@@ -24,7 +28,7 @@ public class FiniteStateMachine
     
     private BufferedReader in;
 
-    public FiniteStateMachine()
+    public FSM0()
     {
         in = new BufferedReader(new InputStreamReader(System.in));
     }
@@ -85,7 +89,7 @@ public class FiniteStateMachine
     {
         try
         {
-            FiniteStateMachine fsm = new FiniteStateMachine();
+            FSM0 fsm = new FSM0();
             fsm.run();
         }
         catch (IOException ex)

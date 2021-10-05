@@ -1,12 +1,23 @@
-// Finite State Machine
-// Counts the number of occurrences of 5 words: 
-// Cheetah, Hatch, Teach, Cheat, Ache
+/**
+ * Finite State Machine 
+ * Counts the number of occurrences of 5 words:
+ * Cheetah, Hatch, Teach, Cheat, Ache
+ * 
+ * To run:
+ * java "program file" "text file"
+ * Example:
+ * java FSMCounter Try.txt
+ * Output:
+ * The count of each of the 5 words listed above
+ * 
+ **/ 
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class SydneyMageeP2 {
+public class FSMCounter {
 
    private static final int cheetahACCEPT = 7;  
    private static final int hatchACCEPT = 12;  
@@ -14,7 +25,7 @@ public class SydneyMageeP2 {
    private static final int cheatACCEPT = 19;
    private static final int acheACCEPT = 23;  
 
-   //   C  H  E   T   A  ?
+  
    private static final int[][] STATE_TABLE = {
        {1, 8, 0, 13, 20, 0}, // state 0
        {1, 2, 0, 13, 20, 0}, // state 1:  c
@@ -50,7 +61,7 @@ public class SydneyMageeP2 {
     private int acheCount;
 
 
-    public SydneyMageeP2(String filename) throws IOException {
+    public FSMCounter(String filename) throws IOException {
         in = new BufferedReader(
                  new FileReader(filename));
        cheetahCount = 0; 
@@ -110,7 +121,7 @@ public class SydneyMageeP2 {
                 ("Run again, entering a filename at the commandline");
         else {
            try {
-               SydneyMageeP2 fsm = new SydneyMageeP2(args[0]);
+               FSMCounter fsm = new FSMCounter(args[0]);
                fsm.run();
            } catch (IOException ex) {
                ex.printStackTrace();

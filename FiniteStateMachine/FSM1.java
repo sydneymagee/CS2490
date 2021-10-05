@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class SydneyMageeP3
+public class FSM1
 {
     private final static int[][] STATE_TABLE = {
         {3, 1, 4}, //0 ACCEPT
@@ -15,7 +15,7 @@ public class SydneyMageeP3
     
     private BufferedReader in;
 
-    public SydneyMageeP3()
+    public FSM1()
     {
         in = new BufferedReader(new InputStreamReader(System.in));
     }
@@ -73,7 +73,7 @@ public class SydneyMageeP3
     {
         try
         {
-            SydneyMageeP3 fsm = new SydneyMageeP3();
+            FSM1 fsm = new FSM1();
             fsm.run();
         }
         catch (IOException ex)
